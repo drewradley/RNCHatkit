@@ -20,7 +20,13 @@ const app = express();
         res.send('all green!');
       });
     app.get('/users', (req, res) => {
-      res.send(console.log(res));
+      chatkit.getUsers()
+      .then((results) =>  {
+        //let stuff = chatkit.getUsers();
+        //console.log(results);
+        res.send(results);
+      })
+      //.then res.send(console.log(chatkit.getUsers()));
       })
       app.post('/users', (req, res) => {
         const { username } = req.body;

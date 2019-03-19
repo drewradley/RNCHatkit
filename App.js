@@ -180,7 +180,7 @@ export default class App extends React.Component {
     }
 
     this.setState({
-      //users: currentUsers
+      users: currentUsers
     });
   };
   // next: add sortUsers function
